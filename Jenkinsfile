@@ -23,11 +23,11 @@ pipeline {
             sh 'npm run start &'
 		    sh 'sleep 1 && echo $! > .pidfile '
             sh '''
-            echo "Visit http://localhost:5000 "
+            echo "Visit http://localhost:3000 "
           '''
             input message: 'Finished using the web site? (Click "Proceed" to continue)'
             sh '''
-            killall node
+               killall -9 node
           '''
 		}
             }
