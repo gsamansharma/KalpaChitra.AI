@@ -27,7 +27,7 @@ pipeline {
           '''
             input message: 'Finished using the web site? (Click "Proceed" to continue)'
             sh '''
-               killall -9 node
+             npx kill-port 3000
           '''
 		}
             }
