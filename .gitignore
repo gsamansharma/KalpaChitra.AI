@@ -6,6 +6,10 @@
 /server/node_modules
 /client/.env
 /server/.env
+/client/yarn.lock
+/server/yarn.lock
+/client/package-lock.json
+/server/package-lock.json
 /.pnp
 .pnp.js
 
