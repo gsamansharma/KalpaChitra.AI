@@ -1,5 +1,5 @@
 import express from "express";
-import { generateImage } from "../controllers/GenerateRPImage.js";
+import { generateImage } from "../controllers/GeneratePolImage.js";
 
 const router = express.Router();
 
