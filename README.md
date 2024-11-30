@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# KalpaChitra.AI - AI Image Generator & Community Showcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## Available Scripts
+KalpaChitra.AI is a full-stack MERN application that brings your imagination to life. It leverages the power of Pollinations AI to generate unique, high-quality images from simple text descriptions. Users can create new art, share it with a vibrant community, and browse a gallery of creations for inspiration.
 
-In the project directory, you can run:
+### **Live Demo**
 
-### `npm start`
+**➡️ [View the live application here](https://kalpa-chitra.netlify.app/)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Key Features
 
-### `npm test`
+- **🤖 AI-Powered Image Generation**: Integrates directly with the Pollinations AI to turn text prompts into visual art.
+- **🖼️ Community Gallery**: A responsive, grid-based showcase of all user-shared images.
+- **🌍 Multilingual Prompts**: The AI understands and generates images from prompts written in various languages, not just English.
+- **🔍 Prompt Discovery**: Hover over any image in the gallery to see the exact prompt used to create it.
+- **🔎 Search Functionality**: Easily search the gallery to find images based on prompt keywords.
+- **📱 Responsive Design**: A seamless experience across desktop, tablet, and mobile devices.
+- **🚀 Automated CI/CD**: Includes a `Jenkinsfile` and `Dockerfile` for automated building and containerization.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Home Page - Community Showcase                           | Create Post Page                                               |
+| -------------------------------------------------------- | -------------------------------------------------------------- |
+| ![KalpaChitra.AI home page gallery](assets/homePage.png) | ![KalpaChitra.AI image generation page](assets/createPage.png) |
+| _A vibrant, public gallery of AI-generated images._      | _An intuitive interface to generate and share your creations._ |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technology Stack
 
-### `npm run eject`
+- **Frontend**: React, styled-components
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB with Mongoose
+- **AI Service**: Pollinations AI
+- **Image Hosting**: Cloudinary
+- **CI/CD**: Jenkins, Docker
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To get a local copy up and running, follow these simple steps.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Prerequisites
 
-## Learn More
+- Node.js and npm
+- MongoDB instance (local or cloud-based)
+- Git
+- Cloudinary
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Installation & Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  **Clone the repository:**
 
-### Code Splitting
+    ```sh
+    git clone https://github.com/your-username/kalpachitra.ai.git
+    cd kalpachitra.ai
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2.  **Setup the Backend:**
 
-### Analyzing the Bundle Size
+    - Navigate to the server directory:
+      ```sh
+      cd server
+      ```
+    - Install NPM packages:
+      ```sh
+      npm install
+      ```
+    - Create a `.env` file in the `server` directory and add your environment variables:
+      ```env
+      MONGODB_URL=your_mongodb_connection_string
+      CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+      CLOUDINARY_API_KEY=your_cloudinary_api_key
+      CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+      ```
+    - Start the server:
+      ```sh
+      npm start
+      ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3.  **Setup the Frontend:**
+    - In a new terminal, navigate to the client directory:
+      ```sh
+      cd client
+      ```
+    - Install NPM packages:
+      ```sh
+      npm install
+      ```
+    - Start the React development server:
+      `sh
+    npm start
+    `
+      The application should now be running at `http://localhost:3000`.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### CI/CD with Jenkins
 
-### Advanced Configuration
+This project is configured for Continuous Integration using Jenkins and Docker.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **`Jenkinsfile`**: Defines a declarative pipeline that automates the entire build process, from installing dependencies to building a final Docker image.
+- **`Dockerfile`**: A multi-stage `Dockerfile` creates a lightweight, optimized production image containing the complete application.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
