@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@capacitor/android": "^5.7.4",
-    "@capacitor/cli": "^5.7.4",
-    "@capacitor/core": "^5.7.4",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.7",
@@ -17,7 +14,6 @@
     "axios": "^1.6.7",
     "detectlanguage": "^2.1.0",
     "file-saver": "^2.0.5",
-    "ionic": "^5.4.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lazy-load-image-component": "^1.6.0",
