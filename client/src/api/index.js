@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://kalpachitra-ai.onrender.com/api/",
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:8080/api/",
 });
 
 export const GetPosts = async () => await API.get("/post/");

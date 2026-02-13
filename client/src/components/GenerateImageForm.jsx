@@ -7,7 +7,7 @@ import { AutoAwesome, CreateRounded } from "@mui/icons-material";
 import { CreatePost, GenerateAIImage } from "../api";
 import translate from "translate";
 var DetectLanguage = require('detectlanguage');
-var detectlanguage = new DetectLanguage('4031b66897c80288950d692485b90192');
+var detectlanguage = new DetectLanguage(process.env.REACT_APP_DETECT_LANGUAGE_KEY);
 const Form = styled.div`
   flex: 1;
   padding: 16px 20px;
@@ -67,9 +67,7 @@ const GenerateImageForm = ({
 
     const result = await detectlanguage.detectCode(text);
     translate.from = result;
-    //  .then(function (result) {
-    //     console.log(result);
-    //   });
+    translate.from = result;
 
     const translation = await translate(text, { to: "en" });
     console.log(translation);
