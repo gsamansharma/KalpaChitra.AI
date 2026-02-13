@@ -31,6 +31,7 @@ export const generateImage = async (req, res, next) => {
     // Upload the base64 image to Cloudinary
     const uploadResponse = await cloudinary.uploader.upload(imageBase64, {
       folder: "generated_images", // Optional: Organize images into a specific folder
+      timeout: 60000, 
     });
 
     console.log(`Image uploaded to Cloudinary: ${uploadResponse.secure_url}`);
@@ -40,7 +41,7 @@ export const generateImage = async (req, res, next) => {
       photo: uploadResponse.secure_url,
     });
   } catch (error) {
-    console.error("Error generating image:", error.message);
+    console.error("Error generating image:", error);
 
     // Pass the error to the next middleware with an appropriate status
     next(
