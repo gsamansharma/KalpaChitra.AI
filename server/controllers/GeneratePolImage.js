@@ -30,7 +30,7 @@ export const generateImage = async (req, res, next) => {
       },
       {
         headers: {
-          apikey: "0000000000",
+          apikey: process.env.STABLE_HORDE_API_KEY || "0000000000",
           "Content-Type": "application/json",
         },
       }
